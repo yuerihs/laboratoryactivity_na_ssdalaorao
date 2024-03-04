@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graded Exercise</title>
+</head>
+<body>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+        var randnum = Math.floor(Math.random() * 1000) + 0;
+        var numstring = randnum.toString();
+        document.getElementById("output1").innerHTML = "Randomly generated number: " + numstring;
+
+        var hundreds = Math.floor(numstring/100)%10 + "00";
+        var tens = Math.floor(numstring/10)%10 + "0";
+        var ones = (numstring%10);
+
+        document.getElementById("output2").innerHTML = "Breakdown: " + hundreds + ", " + tens + ", " + ones;
+
+        var d = new Date();
+        document.getElementById("output3").innerHTML = "Printing date: " + d;
+    </script>
+</body>
+</html>
